@@ -131,7 +131,7 @@ def c_header_header(filename, package):
         '#define LUA_PROTOBUF_%s_H' % package.replace('.', '_'),
         '',
         '#include "lua-protobuf.h"',
-        '#include <%s.pb.h>' % package.replace('.', '/'),
+        '#include <%s.pb.h>' % filename[:-len('.proto')],
         '',
         '#ifdef __cplusplus',
         'extern "C" {',
