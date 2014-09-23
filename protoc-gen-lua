@@ -30,7 +30,7 @@
 from lua_protobuf.generator import file_source, file_header, lua_protobuf_header, lua_protobuf_source
 from google.protobuf.descriptor import FieldDescriptor
 from google.protobuf.compiler.plugin_pb2 import CodeGeneratorRequest, CodeGeneratorResponse
-from sys import stdin, stdout, stderr
+from sys import stdin, stdout, stderr, exit
 
 serialized = stdin.read()
 request = CodeGeneratorRequest()
